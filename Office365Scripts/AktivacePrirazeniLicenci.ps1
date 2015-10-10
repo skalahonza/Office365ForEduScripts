@@ -14,7 +14,7 @@ Write-Host "Pøiøazování umístìní"
 
 Get-MsolUser -UnlicensedUsersOnly | Set-MsolUser -UsageLocation CZ
 
-Write-Host "Pøiøazování licencí"
+Write-Host "Pøiøazování licencí uživatelùm"
 
 Get-MsolUser -UnlicensedUsersOnly |
 Set-MsolUserLicense -AddLicenses GymnaziumDrEmila:STANDARDWOFFPACK_STUDENT
