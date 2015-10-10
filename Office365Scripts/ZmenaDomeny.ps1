@@ -10,6 +10,7 @@ Connect-MsolService -Credential $cred
 
 $domena = "@gyholi.cz" #na tuto doménu se budou měnit účty
 
+# Najde všechny uživatel, kterým končí userprincipal name onmicrosoft.com
 Get-MsolUser -All |
  Where { $_.UserPrincipalName.ToLower().EndsWith("onmicrosoft.com") } |
  ForEach {
