@@ -1,6 +1,6 @@
 ﻿#
 # ZmenaDomeny.ps1
-# Skript změní přihlašovací jméno všech uživatelů s deafultní doméneou na novou doménu
+# Skript meni prihlasovaci jméno vsech uzivatelu s deafultní domenou na novou domenu
 #
 Import-Module Azure
 Import-Module MSOnline
@@ -8,9 +8,9 @@ Import-Module MSOnline
 $cred = Get-Credential
 Connect-MsolService -Credential $cred
 
-$domena = "@gyholi.cz" #na tuto doménu se budou měnit účty
+$domena = "@gyholi.cz" #na tuto domenu se budou menit ucty
 
-# Najde všechny uživatel, kterým končí userprincipal name onmicrosoft.com
+# Najde vsechny uzivatele, kterym konci userprincipal name na onmicrosoft.com
 Get-MsolUser -All |
  Where { $_.UserPrincipalName.ToLower().EndsWith("onmicrosoft.com") } |
  ForEach {
