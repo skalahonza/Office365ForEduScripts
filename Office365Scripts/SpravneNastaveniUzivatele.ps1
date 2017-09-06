@@ -1,3 +1,3 @@
-﻿$cred = Get-Credential -UserName admin@GymnaziumDrEmila.onmicrosoft.com -
+$cred = Get-Credential
 Connect-MsolService -Credential $cred
 Get-MsolUser -Synchronized -DomainName "gyholi.cz"
